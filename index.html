@@ -1,424 +1,511 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
 
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="description" content="Portfolio Website" />
 	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
 
-
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
+	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-	<!-- Theme style  -->
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 
-	</head>
-	<body>
-		
-		<div class= "header">		
-			<input class="menu-btn" type="checkbox" id="menu-btn" />
-  				<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-  					<ul class="menu ; col-md-auto">
-   						<li><a href="#work">Our Work</a></li>
-    					<li><a href="#about">About</a></li>
-    					<li><a href="#careers">Careers</a></li>
-    					<li><a href="#contact">Contact</a></li>
-  					</ul>
+	<style>
+		.projects-section {
+			background-color: #f7f7f7;
+			padding: 60px 0;
+		}
+
+		.section-heading h2 {
+			font-family: 'Kaushan Script', cursive;
+			color: #333;
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+
+		.project-card {
+			background-color: #fff;
+			border-radius: 8px;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			transition: transform 0.3s ease;
+			margin-bottom: 30px;
+		}
+
+		.project-card:hover {
+			transform: translateY(-10px);
+		}
+
+		.project-image {
+			background-size: cover;
+			background-position: center;
+			height: 200px;
+		}
+
+		.project-details {
+			padding: 20px;
+		}
+
+		.project-title a {
+			color: #333;
+			font-size: 18px;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+
+		.project-date {
+			font-size: 12px;
+			color: #999;
+			margin-bottom: 10px;
+		}
+
+		.project-title a:hover {
+			color: #007bff;
+		}
+
+		.project-description {
+			color: #555;
+			font-size: 14px;
+			margin: 15px 0;
+		}
+
+		.project-tech {
+			display: block;
+			font-size: 12px;
+			color: #777;
+			margin-bottom: 15px;
+		}
+
+		.project-link a {
+			text-decoration: none;
+			font-size: 14px;
+			color: #007bff;
+		}
+
+		.project-link a i {
+			margin-left: 5px;
+			transition: margin-left 0.3s ease;
+		}
+
+		.project-link a:hover i {
+			margin-left: 10px;
+		}
+
+		.nav-link {
+			margin: 0 25px;
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Centered Horizontal Navigation Bar -->
+	<!-- Separate Fixed Navigation Bar -->
+	<div class="container">
+		<div class="col-md-12 text-center">
+			<nav class="nav justify-content-center mt-4"
+				style="background-color: #3e2e4c; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+				<a class="nav-link active" href="#About">About</a>
+				<a class="nav-link" href="#Skills">Skills</a>
+				<a class="nav-link" href="#Exp">Experience</a>
+				<a class="nav-link" href="#Qualification">Qualification</a>
+				<a class="nav-link" href="#Projects">Projects</a>
+				<a class="nav-link" href="#Contact">Contact</a>
+			</nav>
 		</div>
-</header>
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<div class="profile-thumb" style="background: url(images/user-3.jpeg);"></div>
-							<h1><span>Abhay Wuntkal</span></h1>
-							<h3><span>Full Stack Web Developer</span></h3>
-							<p>
+	</div>
+
+	<div id="page">
+		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+			style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="display-t js-fullheight">
+							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+								<div class="profile-thumb" style="background: url(images/user-4.jpg);"></div>
+								<h1><span>Abhay Wuntkal</span></h1>
+								<h3><span>Full Stack Web Developer</span></h3>
 								<ul class="fh5co-social-icons">
-									<li><a href="https://www.linkedin.com/in/abhaywuntkal/" target=“_blank”><i class="icon-linkedin2"></i></a></li>
-									<li><a href="https://github.com/AbhayWuntkal" target=“_blank”><i class="icon-github2"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/abhaywuntkal/" target="_blank"><i
+												class="icon-linkedin2"></i></a></li>
+									<li><a href="https://github.com/AbhayWuntkal" target="_blank"><i
+												class="icon-github2"></i></a></li>
 								</ul>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		
-	</header>
-	
+		</header>
+	</div>
 
-	<a name="myAnchor" id="myAnchor"></a>
-	<div id="fh5co-about" class="animate-box">
+	<section id="About" class="animate-box" style="margin: 20px;">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+			<div class="row text-center">
+				<div class="col-md-12">
 					<h2><strong>A little About me,</strong></h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xl-auto" style="padding: 20px; text-align: justify; font-size: 20px;">
 					<h2>Hello :)</h2>
-					<p>My name is Abhay Wuntkal. I'm a junior developer from Mumbai. I love solving problems which is one of the reasons why I started programming and got into web development. I'm deeply passionate about web development and fascinated by the idea of how we can solve problems through web based applications, since they are easily accessible. </p>
-					<p>I have a creative mindset which allows me to find alternative ways to solve a problem.</p>
-					<p>Some of the key technologies that I have a practical experience in during my academic journey, are: Java, Spring MVC, Spring Boot, JavaScript and ReactJs.</p>
+					<p>My name is Abhay Wuntkal. I'm a junior developer from Mumbai. I love solving problems, which
+						is one of the reasons why I started programming and got into web development. I'm deeply
+						passionate about web development and fascinated by the idea of how we can solve problems through
+						web
+						based applications, since they are easily accessible.</p>
+					<p>I have a creative mindset that allows me to find alternative ways to solve a problem.</p>
+					<p>Some of the key technologies that I have practical experience in during my academic journey
+						are Java, Spring MVC, Spring Boot, JavaScript, and React.js.</p>
 
-					<p><a href="https://drive.google.com/file/d/1XrOgVVyliRGqtvKesVpDXo1zM0D_fBHZ/view?usp=sharing" target=“_blank”><button type="button" class="btn btn-outline-secondary" style="border: 2px solid black;">Resume</button></a></p>
-					
 					<p>
-						<ul class="fh5co-social-icons">
-							
-							<li><a href="https://github.com/AbhayWuntkal" target=“_blank”><i class="icon-github2"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/abhaywuntkal/" target=“_blank”><i class="icon-linkedin2"></i></a></li>
-						</ul>
+						<a href="https://drive.google.com/file/d/1KVVCDGwU5H6IMfC0pCIB-uomarNClX1Q/view?usp=sharing"
+							target="_blank">
+							<button type="button" class="btn btn-outline-secondary"
+								style="border: 2px solid black;">Resume</button>
+						</a>
 					</p>
+
+					<ul class="fh5co-social-icons list-unstyled">
+						<li><a href="https://github.com/AbhayWuntkal" target="_blank"><i class="icon-github2"></i></a>
+						</li>
+						<li><a href="https://www.linkedin.com/in/abhaywuntkal/" target="_blank"><i
+									class="icon-linkedin2"></i></a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	
-	<div >
-		<a name="myAnchor2" id="myAnchor2"></a>
-	<div id="fh5co-skills" class="animate-box" >
-		
-		<div class="container" >
-			<div class="row" >
-				<div class="text-center fh5co-heading" >
+
+	<section id="Skills" id="fh5co-skills" class="animate-box">
+		<div class="container">
+			<div class="row text-center fh5co-heading">
+				<div class="col-md-12">
 					<h2><strong>My Skills</strong></h2>
-					<h3>Tech I'm fimiliar with</h3>
+					<h3>Tech I'm familiar with</h3>
 				</div>
 			</div>
-			
+
 			<div class="row">
-    			<div class="col-md-6">
-					<div class="text-center fh5co-heading">
-					<h3><strong>Tools</strong></h3>
-					</div>
-     				<ul class="grid">
-					<li class="grid-item"><img src ="images/figma.svg" width="50%">Figma</li>
-					<li class="grid-item"><img src ="images/adobe-xd.png" width="50%">Adobe XD</li>
-					<li class="grid-item"><img src ="images/axure.svg" width="50%">Axure RP</li>
-					<li class="grid-item"><img src ="images/vs-code.svg" width="50%">VS Code</li>
-					<li class="grid-item"><img src ="images/eclipse.svg" width="50%">Eclipse</li>
-					<li class="grid-item"><img src ="images/wordpress.svg" width="50%">Wordpress</li>
-					<li class="grid-item"><img src ="images/git.svg" width="50%"></li>
-					<li class="grid-item"><img src ="images/github.svg" width="50%"></li>
-					<li class="grid-item"><img src ="images/cisco.svg" width="50%">Packet Tracer</li>
-					<li class="grid-item"><img src ="images/xampp.png" width="50%">Xampp</li>
-					
-					
-				</ul>
-    		</div>
-			
-   		 <div class="col-md-6">
-			<div class="text-center fh5co-heading">
-			<h3><strong>Technologies</strong></h3>
-			</div>
-    		  <ul class="grid">
-					<li class="grid-item"><img src ="images/java.svg" width="50%">Java</li>
-					<li class="grid-item"><img src ="images/spring-boot.svg" width="50%">Spring Boot</li>
-					<li class="grid-item"><img src ="images/javascript.svg" width="50%">JavaScript</li>
-					<li class="grid-item"><img src ="images/html5.svg" width="50%">Html 5</li>
-					<li class="grid-item"><img src ="images/css3.svg" width="50%">CSS 3</li>
-					<li class="grid-item"><img src ="images/bootstrap.svg" width="50%">Bootstrap</li>
-					<li class="grid-item"><img src ="images/react.svg" width="50%">React</li>
-					<li class="grid-item"><img src ="images/tailwind-css.svg" width="50%">Tailwind</li>	
-					<li class="grid-item"><img src ="images/jquery.svg" width="50%">jQuery</li>
-					<li class="grid-item"><img src ="images/json.svg" width="50%"></li>
-				</ul>
-    		</div>
-		</div>
+				<div class="col-md-6">
+					<h3 class="text-center"><strong>Tools</strong></h3>
+					<ul class="grid">
+						<li class="grid-item"><img src="images/figma.svg" width="50%">Figma</li>
+						<li class="grid-item"><img src="images/adobe-xd.png" width="50%">Adobe XD</li>
+						<li class="grid-item"><img src="images/axure.svg" width="50%">Axure RP</li>
+						<li class="grid-item"><img src="images/vs-code.svg" width="50%">VS Code</li>
+						<li class="grid-item"><img src="images/eclipse.svg" width="50%">Eclipse</li>
+						<li class="grid-item"><img src="images/wordpress.svg" width="50%">Wordpress</li>
+						<li class="grid-item"><img src="images/git.svg" width="50%">Git</li>
+						<li class="grid-item"><img src="images/github.svg" width="50%">GitHub</li>
+						<li class="grid-item"><img src="images/cisco.svg" width="50%">Packet Tracer</li>
+						<li class="grid-item"><img src="images/xampp.png" width="50%">Xampp</li>
+					</ul>
+				</div>
 
-<a name="myAnchor3" id="myAnchor3"></a>
-	<br>
-	<br>
-	
-	<div  class="fh5co-bg-color">
+				<div class="col-md-6">
+					<h3 class="text-center"><strong>Technologies</strong></h3>
+					<ul class="grid">
+						<li class="grid-item"><img src="images/java.svg" width="50%">Java</li>
+						<li class="grid-item"><img src="images/spring-boot.svg" width="50%">Spring Boot</li>
+						<li class="grid-item"><img src="images/javascript.svg" width="50%">JavaScript</li>
+						<li class="grid-item"><img src="images/html5.svg" width="50%">HTML 5</li>
+						<li class="grid-item"><img src="images/css3.svg" width="50%">CSS 3</li>
+						<li class="grid-item"><img src="images/bootstrap.svg" width="50%">Bootstrap</li>
+						<li class="grid-item"><img src="images/react.svg" width="50%">React</li>
+						<li class="grid-item"><img src="images/tailwind-css.svg" width="50%">Tailwind</li>
+						<li class="grid-item"><img src="images/jquery.svg" width="50%">jQuery</li>
+						<li class="grid-item"><img src="images/json.svg" width="50%">JSON</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="Exp" id="fh5co-experience" class="fh5co-bg-color">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Work Experience</h3></div>
-						</li>
-						<li class="timeline-inverted animate-box" >
-							<div class="timeline-badge"><i class="icon-office"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title"><strong>Traversia Technology Pvt. Ltd.</strong></h3>
-									<span class="company">Gurugram, Haryana / Dec 21' - May 22'</span>
-								</div>
-								<div class="timeline-body">
-									<p><strong>Web Developer / Remote Internship Program</strong>
-									<p>I worked on the project “DTC”. Project was aimed to  provide a digitalized travel approval system.<br/> As part of the project, I developed various functionalities and feature as per the specifications. 
-									<p><strong>Technology Stack –</strong>
-									Angular 13 with Spring boot and designed UI using Figma</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
+			<div class="row text-center fh5co-heading">
+				<div class="col-md-12">
+					<h3>Work Experience</h3>
 				</div>
 			</div>
+			<ul class="timeline">
+				<li class="timeline-inverted animate-box">
+					<div class="timeline-badge"><i class="icon-office"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h3 class="timeline-title"><strong>Traversia Technology Pvt. Ltd.</strong></h3>
+							<span class="company">Gurugram, Haryana / Dec 21' - May 22'</span>
+						</div>
+						<div class="timeline-body">
+							<p><strong>Web Developer / Remote Internship Program</strong></p>
+							<p>I worked on the project “DTC”. Project was aimed to provide a
+								digitalized travel approval system.<br /> As part of the project, I
+								developed various functionalities and feature as per the specifications.</p>
+							<p><strong>Technology Stack –</strong> Angular 13 with Spring Boot and designed UI using
+								Figma</p>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
-	</div>
-	<br>
+	</section>
 
-<a name="myAnchor3" id="myAnchor3"></a>
-	<br>
-	<br>
-	
-	<div  class="fh5co-bg-color">
+	<section id="Qualification" id="fh5co-education" class="fh5co-bg-color">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title"><strong>Diploma Course</strong></h3>
-									<span class="company">Mumbai - 2019 - 2022</span>
-								</div>
-								<div class="timeline-body">
-									<p><strong>Lithan Academy </strong> / Pearson BTEC Level 5 Higher National Diploma in computing </p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title"><strong>Junior College</strong></h3>
-									<span class="company">Mumbai - 2017 - 2019</span>
-								</div>
-								<div class="timeline-body">
-									<p><strong> T.P.Bhatia College of Science </strong> / 11th – 12th</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title"><strong>School</strong></h3>
-									<span class="company">Mumbai - 2006 - 2017</span>
-								</div>
-								<div class="timeline-body">
-									<p><strong>St. Xavier’s high school</strong></p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
+			<div class="row text-center fh5co-heading">
+				<div class="col-md-12">
+					<h3>Education</h3>
+				</div>
+			</div>
+			<ul class="timeline">
+				<li class="animate-box timeline-unverted">
+					<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h3 class="timeline-title"><strong>Graduation College</strong></h3>
+							<span class="company">Mumbai - 2023 - 2025</span>
+						</div>
+						<p><strong> UCAM Catholic University of Murcia </strong> / BTech in Software Engineering</p>
+					</div>
+				</li>
+				<li class="timeline-inverted animate-box">
+					<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h3 class="timeline-title"><strong>Diploma Course</strong></h3>
+							<span class="company">Mumbai - 2019 - 2022</span>
+						</div>
+						<p><strong>Lithan Academy </strong> / Pearson BTEC Level 5 Higher National Diploma in
+							computing
+						</p>
+					</div>
+				</li>
+				<li class="animate-box timeline-unverted">
+					<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h3 class="timeline-title"><strong>Junior College</strong></h3>
+							<span class="company">Mumbai - 2017 - 2019</span>
+						</div>
+						<p><strong> T.P.Bhatia College of Science </strong> / 11th – 12th</p>
+					</div>
+				</li>
+				<li class="timeline-inverted animate-box">
+					<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h3 class="timeline-title"><strong>School</strong></h3>
+							<span class="company">Mumbai - 2006 - 2017</span>
+						</div>
+						<p><strong>St. Xavier’s high school</strong></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+
+<section class="projects-section" id="Projects">
+	<div class="container">
+		<div class="row animate-box text-center">
+			<div class="col-md-8 col-md-offset-2 fh5co-heading">
+				<h2 class="section-heading"><strong>Projects</strong></h2>
+				<p style="text-align: justify; margin-top: 30px;">While working on my Academic Projects, I developed
+					distinct knowledge in UI/UX designing, Research Analysis, Database designing, and Software Testing.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<!-- Project Card 1 -->
+			<div class="col-md-4">
+				<div class="project-card animate-box">
+					<div class="project-image" style="background-image: url(images/portfolio-5.jpg);"></div>
+					<div class="project-details">
+						<span class="project-date">April 2020</span>
+						<h3 class="project-title"><a
+								href="https://github.com/AbhayWuntkal/ABC-Jobs-Community-Portal.git" target="_blank">ABC
+								Jobs Community Portal</a></h3>
+						<p class="project-description">Developed a website similar to LinkedIn for software developers,
+							enabling users to register, log in, and search and view profiles of other people.</p>
+						<span class="project-tech">Java, Struts2, MySQL database server</span>
+						<div class="project-link"><a
+								href="https://github.com/AbhayWuntkal/ABC-Jobs-Community-Portal.git"
+								target="_blank">Read More<i class="icon-arrow-right22"></i></a></div>
+					</div>
+				</div>
+			</div>
+			<!-- Project Card 2 -->
+			<div class="col-md-4">
+				<div class="project-card animate-box">
+					<div class="project-image" style="background-image: url(images/portfolio-7.jpg);"></div>
+					<div class="project-details">
+						<span class="project-date">January 2020</span>
+						<h3 class="project-title"><a
+								href="https://github.com/AbhayWuntkal/ABC-Jobs-Portal-Prototype-Designing.git"
+								target="_blank">ABC Jobs Portal Prototype Designing</a></h3>
+						<p class="project-description">Designed and developed a website prototype for the "ABC jobs Pte
+							Ltd" community portal similar to LinkedIn.</p>
+						<span class="project-tech">Axure RP Software</span>
+						<div class="project-link"><a
+								href="https://github.com/AbhayWuntkal/ABC-Jobs-Portal-Prototype-Designing.git"
+								target="_blank">Read More<i class="icon-arrow-right22"></i></a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="project-card animate-box">
+					<div class="project-image" style="background-image: url(images/portfolio-6.jpg);"></div>
+					<div class="project-details">
+						<span class="project-date">February 2020</span>
+						<h3 class="project-title"><a
+								href="https://github.com/AbhayWuntkal/Database-design-development-and-testing.git"
+								target="_blank">Database design, development, and testing</a></h3>
+						<p class="project-description">Designed, developed, and tested a MySQL database for “ABC Jobs
+							Pte Ltd” community portal,
+							optimized the database, and made it ready for deployment.</p>
+						<span class="project-tech">MySQL database, MySQL workbench, DML</span>
+						<div class="project-link"><a
+								href="https://github.com/AbhayWuntkal/Database-design-development-and-testing.git"
+								target="_blank">Read More<i class="icon-arrow-right22"></i></a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="project-card animate-box">
+					<div class="project-image" style="background-image: url(images/portfolio-1.jpg);"></div>
+					<div class="project-details">
+						<span class="project-date">May 2021</span>
+						<h3 class="project-title"><a
+								href="https://github.com/AbhayWuntkal/Know-Your-Neighborhood-website"
+								target="_blank">Know Your Neighborhood (KYN) Website</a></h3>
+						<p class="project-description">Designed and developed a portal with secure register and Google
+							login functionality for users to seamlessly and securely
+							register and log in to the portal.</p>
+						<span class="project-tech">Java, Spring Boot, ReactJs</span>
+						<div class="project-link"><a
+								href="https://github.com/AbhayWuntkal/Know-Your-Neighborhood-website"
+								target="_blank">Read More<i class="icon-arrow-right22"></i></a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="project-card animate-box">
+					<div class="project-image" style="background-image: url(images/portfolio-2.jpg);"></div>
+					<div class="project-details">
+						<span class="project-date">March 2021</span>
+						<h3 class="project-title"><a
+								href="https://github.com/AbhayWuntkal/Triple-A-AAA-Hosting-service-company"
+								target="_blank">Triple-A (AAA) Hosting service company</a></h3>
+						<p class="project-description">Designed and developed a website for “AAA host solution service
+							company,” where users can view and purchase services.</p>
+						<span class="project-tech">Java, Liferay</span>
+						<div class="project-link"><a
+								href="https://github.com/AbhayWuntkal/Triple-A-AAA-Hosting-service-company"
+								target="_blank">Read More<i class="icon-arrow-right22"></i></a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="project-card animate-box">
+					<div class="project-image" style="background-image: url(images/portfolio-3.jpg);"></div>
+					<div class="project-details">
+						<span class="project-date">August 2020</span>
+						<h3 class="project-title"><a
+								href="https://github.com/AbhayWuntkal/ABC-Cars-used-cars-sales-portal"
+								target="_blank">ABC Cars used cars sales portal</a></h3>
+						<p class="project-description">Developed a secure used car sales portal for “ABC Cars Pte Ltd,”
+							enabling users to register, log in, and manage their
+							car listings.</p>
+						<span class="project-tech">Java, Spring MVC, Spring Security, JSP, JDBC, JPA</span>
+						<div class="project-link"><a
+								href="https://github.com/AbhayWuntkal/ABC-Cars-used-cars-sales-portal"
+								target="_blank">Read More<i class="icon-arrow-right22"></i></a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="project-card animate-box">
+					<div class="project-image" style="background-image: url(images/portfolio-4.jpg);"></div>
+					<div class="project-details">
+						<span class="project-date">July 2020</span>
+						<h3 class="project-title"><a
+								href="https://github.com/AbhayWuntkal/Network-Infrastructure-Development"
+								target="_blank">Network Infrastructure Development</a></h3>
+						<p class="project-description">Designed a network infrastructure for “Lithan Academy” to support
+							30 devices, enabling them to perform various tasks.</p>
+						<span class="project-tech">Cisco Packet Tracer, Creatly</span>
+						<div class="project-link"><a
+								href="https://github.com/AbhayWuntkal/Network-Infrastructure-Development"
+								target="_blank">Read More<i class="icon-arrow-right22"></i></a></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<br>
-	
-	<a name="myAnchor4" id="myAnchor4"></a>
-	<div id="fh5co-blog">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2><strong>Projects</strong></h2>
-					<p style="text-align: justify; margin-top: 30px;">While working on my Academic Projects I developed a distinct knowledge in UI/UX designing, Research Analysis, Database designing and Software Testing. </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a class="blog-bg" style="background-image: url(images/portfolio-5.jpg); "></a>
-						<div class="blog-text" >
-							<span class="posted_on">April. 2020</span>
-							<h3><a href="https://github.com/AbhayWuntkal/ABC-Jobs-Community-Portal.git" target=“_blank”>ABC Jobs Community Portal</a></h3>
-							<p>Developed a website similar to LinkedIn for software developers. To enable users to register,login on portal and to search and view profile of other people.</p>
-							<span class="posted_on">Java, Struts2, MySQL database server</span>
-							<ul class="stuff">
-								<li><a href="https://github.com/AbhayWuntkal/ABC-Jobs-Community-Portal.git" target=“_blank”>Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a  class="blog-bg" style="background-image: url(images/portfolio-7.jpg);"></a>
-						<div class="blog-text" >
-							<span class="posted_on">January. 2020</span>
-							<h3><a href="https://github.com/AbhayWuntkal/ABC-Jobs-Portal-Prototype-Designing.git" target=“_blank”>ABC Jobs Portal Prototype Designing</a></h3>
-							<p>Designed and developed website prototype for <b>"ABC jobs Pte Ltd"</b> community portal similar to LinkedIn.</p>
-							<span class="posted_on">Axure RP Software</span>
-							<ul class="stuff">
-								<li><a href="https://github.com/AbhayWuntkal/ABC-Jobs-Portal-Prototype-Designing.git"  target=“_blank”>Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a class="blog-bg" style="background-image: url(images/portfolio-6.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">February. 2020	</span>
-							<h3><a href="https://github.com/AbhayWuntkal/Database-design-development-and-testing.git" target=“_blank”>Database design, development and testing</a></h3>
-							<p>Designed, developed and tested a MySQL database for <b>“ABC Jobs Pte Ltd”</b> community portal. Optimized the database and ready to deploy.
-							</p>
-							<span class="posted_on">MySQL database, MySQL workbench, DML</span>
-							<ul class="stuff">
-								<li><a href="https://github.com/AbhayWuntkal/Database-design-development-and-testing.git" target=“_blank”>Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-md-4" >
-					<div class="fh5co-blog animate-box" >
-						<a  class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">May. 2021</span>
-							<h3><a href="https://github.com/AbhayWuntkal/Know-Your-Neighborhood-website.git" target=“_blank”>Know Your Neighborhood (KYN) Website</a></h3>
-							<p>Designed and developed a portal with secure register and google login functionality for users to seemlessly and securely register and login in the portal.</p>
-							<span class="posted_on">Java, Spring Boot, ReactJs</span>
-							<ul class="stuff">
-								
-								<li><a href="https://github.com/AbhayWuntkal/Know-Your-Neighborhood-website.git" target=“_blank”>Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-sm-4" >
-					<div class="fh5co-blog animate-box">
-						<a class="blog-bg" style="background-image: url(images/portfolio-2.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">March. 2021</span>
-							<h3><a href="https://github.com/AbhayWuntkal/Triple-A-AAA-Hosting-service-company.git" target=“_blank”>Triple-A (AAA) Hosting service company</a></h3>
-							<p>Designed and developed a website for <b>“AAA host solution service company”</b> where users are able to view and purchase services.</p>
-							<span class="posted_on">Java, Liferay</span>
-							<ul class="stuff">
-								<li><a href="https://github.com/AbhayWuntkal/Triple-A-AAA-Hosting-service-company.git" target=“_blank”>Read More<i class="icon-arrow-right22"></i></a></li>
-								
-							</ul>
-						</div> 
-					</div>
-				</div>
-				
-				<div class="col-sm-4">
-					<div class="fh5co-blog animate-box">
-						<a class="blog-bg" style="background-image: url(images/portfolio-3.jpg);"></a>
-						<div class="blog-text" >
-							<span class="posted_on">August. 2020</span>
-							<h3><a href="https://github.com/AbhayWuntkal/ABC-Cars-used-cars-sales-portal.git" target=“_blank”>ABC Cars used cars sales portal</a></h3>
-							<p>Developed a secure used car sales portal for <b>“ABC Cars Pte Ltd”</b>. Enables user to register and login to portal after which users can Edit their profile and list, edit and delist their cars.</p>
-							<span class="posted_on">Java, Spring MVC, Spring Security, JSP, JDBC, JPA</span>
-							<ul class="stuff">
-								<li><a href="https://github.com/AbhayWuntkal/ABC-Cars-used-cars-sales-portal.git" target=“_blank”>Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="fh5co-blog animate-box">
-						<a class="blog-bg" style="background-image: url(images/portfolio-4.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">July. 2020</span>
-							<h3><a href="https://github.com/AbhayWuntkal/Network-Infrastructure-Development.git" target=“_blank”>Network Infrastructure Development</a></h3>
-							<p>Designed a network infrastructure for <b>“Lithan Academy”</b> with an insight to develop for 30 devices to be able to perform various tasks</p>
-							<span class="posted_on">Cisco Packet Tracer, Creatly</span>
-							<ul class="stuff">
-								<li><a href="https://github.com/AbhayWuntkal/Network-Infrastructure-Development.git" target=“_blank”>Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-							<br>
-							<br>
-						</div> 
-					</div>
-				</div>
+</section>
 
-			</div>
-		</div>
+<footer id="Contact"
+	style="background-color: #3e2e4c; padding: 20px 0; text-align: center; color: #fff; position: relative;">
+	<div>
+		<p>Contact: <a href="mailto:wuntkalabhay@gmail.com"
+				style="color: #fff; text-decoration: underline;">wuntkalabhay@gmail.com</a></p>
 	</div>
-	
-	<a name="myAnchor5" id="myAnchor5"></a>
-	<div id="fh5co-started" class="fh5co-bg-dark" class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
-					<h2>Let's Talk</h2>
-					<p>Want to connect? My inbox is always open!</p>
-					
-					<a href="mailto:wuntkalabhay@gmail.com" ><p>wuntkalabhay@gmail.com</p></a>
-					<div>
-					</div>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="https://www.linkedin.com/in/abhaywuntkal/" target=“_blank”><i class="icon-linkedin2"></i></a></li>
-							<li><a href="https://github.com/AbhayWuntkal" target=“_blank”><i class="icon-github2"></i></a></li>
-							<li><a href="https://www.instagram.com/abhay.wuntkal/" target=“_blank”><i class="icon-instagram"></i></a></li>
-						</ul>
-					</p>				
-				</div>	
-			</div>
-		</div>
+	<div>
+		<a href="https://www.linkedin.com/in/abhaywuntkal/" target="_blank" style="color: #fff; margin: 0 10px;">
+			<i class="icon-linkedin2"></i> LinkedIn
+		</a>
+		<a href="https://github.com/AbhayWuntkal" target="_blank" style="color: #fff; margin: 0 10px;">
+			<i class="icon-github2"></i> GitHub
+		</a>
+		<a href="https://www.instagram.com/abhay.wuntkal/" target="_blank" style="color: #fff; margin: 0 10px;">
+			<i class="icon-instagram"></i> Instagram
+		</a>
 	</div>
+	<div style="margin-top: 20px; font-size: 14px;">
+		<p>&copy; 2024 Abhay Wuntkal. All Rights Reserved.</p>
+	</div>
+</footer>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
 
-	</body>
+
+
+
+<div class="gototop js-top">
+	<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+</div>
+
+<!-- JavaScript Files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.easypiechart.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
 </html>
-
