@@ -33,6 +33,7 @@
 			color: #333;
 			font-size: 36px;
 			margin-bottom: 20px;
+			text-align: center;
 		}
 
 		.project-card {
@@ -40,12 +41,18 @@
 			border-radius: 8px;
 			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 			overflow: hidden;
-			transition: transform 0.3s ease;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
 			margin-bottom: 30px;
+			height: 100%;
+			/* Ensure all cards have the same height */
+			display: flex;
+			flex-direction: column;
 		}
 
 		.project-card:hover {
 			transform: translateY(-10px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+			/* Add shadow on hover */
 		}
 
 		.project-image {
@@ -56,6 +63,10 @@
 
 		.project-details {
 			padding: 20px;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 
 		.project-title a {
@@ -63,6 +74,11 @@
 			font-size: 18px;
 			text-decoration: none;
 			transition: color 0.3s ease;
+			margin-bottom: 10px;
+		}
+
+		.project-title a:hover {
+			color: #007bff;
 		}
 
 		.project-date {
@@ -71,14 +87,10 @@
 			margin-bottom: 10px;
 		}
 
-		.project-title a:hover {
-			color: #007bff;
-		}
-
 		.project-description {
 			color: #555;
 			font-size: 14px;
-			margin: 15px 0;
+			margin-bottom: 10px;
 		}
 
 		.project-tech {
@@ -92,6 +104,8 @@
 			text-decoration: none;
 			font-size: 14px;
 			color: #007bff;
+			margin-top: auto;
+			transition: color 0.3s ease;
 		}
 
 		.project-link a i {
@@ -107,6 +121,22 @@
 			margin: 0 25px;
 			color: white;
 			text-decoration: none;
+			font-size: 16px;
+			transition: color 0.3s ease;
+		}
+
+		.nav-link:hover {
+			color: #cccccc;
+		}
+
+		.nav {
+			background-color: #52395d;
+			padding: 15px;
+			max-width: 100%;
+			position: fixed;
+			width: 100%;
+			z-index: 10;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -256,12 +286,19 @@
 						</div>
 						<div class="timeline-body">
 							<p><strong>Web Developer / Remote Internship Program</strong></p>
-							<p>I worked on the project “DTC”. Project was aimed to provide a
-								digitalized travel approval system.<br /> As part of the project, I
-								developed various functionalities and feature as per the specifications.</p>
+							<ul>
+								<li>Developed a full-stack web application project with a digital approval system for
+									corporate travelers
+									using Angular, Java - Spring Boot, and MySQL Database.</li>
+								<li>Enhanced the digital approval system, improving approval times by 50%.</li>
+								<li>Created technical documentation for seamless knowledge transfer.</li>
+								<li>Collaborated with the team to boost system performance, achieving a 25% increase in
+									efficiency.</li>
+							</ul>
 							<p><strong>Technology Stack –</strong> Angular 13 with Spring Boot and designed UI using
 								Figma</p>
 						</div>
+
 					</div>
 				</li>
 			</ul>
@@ -334,7 +371,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<!-- Project Card 1 -->
+
 			<div class="col-md-4">
 				<div class="project-card animate-box">
 					<div class="project-image" style="background-image: url(images/portfolio-5.jpg);"></div>
@@ -352,7 +389,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- Project Card 2 -->
+
 			<div class="col-md-4">
 				<div class="project-card animate-box">
 					<div class="project-image" style="background-image: url(images/portfolio-7.jpg);"></div>
